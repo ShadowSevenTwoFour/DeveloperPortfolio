@@ -5,10 +5,10 @@ export default function AboutContact() {
       <section className="mb-16">
         <h1 className="text-4xl font-extrabold mb-6 text-white">About Me</h1>
         <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-          I’m Mayank Kumaran, an Electrical and Computer Engineering student passionate about AI, embedded systems, and high-frequency trading technology.
+          I&rsquo;m Mayank Kumaran, an Electrical and Computer Engineering student passionate about AI, embedded systems, and high-frequency trading technology.
         </p>
         <p className="text-lg text-gray-300 leading-relaxed">
-          My experience spans machine learning, embedded systems, and web development, including projects like creating an open-source Active Learning package, developing an MQTT client for electric vehicles, and leading the development of a 2D fighter game. I enjoy tackling complex challenges, collaborating on creative solutions, and continuously learning new technologies. When I'm not coding, I enjoy working on game development, mentoring, and exploring the latest in AI and tech.
+          My experience spans machine learning, embedded systems, and web development, including projects like creating an open-source Active Learning package, developing an MQTT client for electric vehicles, and leading the development of a 2D fighter game. I enjoy tackling complex challenges, collaborating on creative solutions, and continuously learning new technologies. When I&apos;m not coding, I enjoy working on game development, mentoring, and exploring the latest in AI and tech.
         </p>
       </section>
 
@@ -16,7 +16,7 @@ export default function AboutContact() {
       <section className="bg-gray-900 p-8 rounded-lg shadow-lg">
         <h2 className="text-3xl font-bold mb-6 text-white">Contact Me</h2>
         <p className="text-lg text-gray-400 mb-6">
-          Feel free to reach out if you'd like to collaborate on a project, have any questions, or just want to say hi!
+          Feel free to reach out if you&apos;d like to collaborate on a project, have any questions, or just want to say hi!
         </p>
         <div className="space-y-4">
           <p className="text-lg text-gray-400">
