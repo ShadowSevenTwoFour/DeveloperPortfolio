@@ -20,7 +20,7 @@ export default function ThreeBackground() {
     const positions = [];
     const colors = [];
     const velocities = [];
-    const numPoints = 200;
+    const numPoints = 300;
 
     const cursorPosition = new THREE.Vector3();
     const raycaster = new THREE.Raycaster();
@@ -89,8 +89,20 @@ export default function ThreeBackground() {
       if (intersects.length > 0) {
         cursorPosition.copy(intersects[0].point);
         needsColorUpdate = true;
+      } else {
+        raycaster.ray.at(50, cursorPosition);
+        needsColorUpdate = true;
       }
     });
+
+    // Window resize handling
+    const onWindowResize = () => {
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(window.innerWidth, window.innerHeight);
+    };
+
+    window.addEventListener('resize', onWindowResize);
 
     camera.position.z = 100;
     camera.position.x = 0;
@@ -139,6 +151,7 @@ export default function ThreeBackground() {
       if (mountRef.current) {
         mountRef.current.removeChild(renderer.domElement);
       }
+      window.removeEventListener('resize', onWindowResize); // Clean up event listener
     };
   }, []);
 
