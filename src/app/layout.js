@@ -1,15 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { motion } from "framer-motion"; // Import motion from Framer Motion
 import { usePathname } from "next/navigation"; // To track route changes
 import "./globals.css";
-
-const pageVariants = {
-  hidden: { opacity: 0, x: -200 },
-  enter: { opacity: 1, x: 0 },
-  exit: { opacity: 0, x: 200 },
-};
 
 export default function RootLayout({ children }) {
   const [isAtTop, setIsAtTop] = useState(true);
@@ -64,18 +57,10 @@ export default function RootLayout({ children }) {
           </header>
         )}
 
-        {/* Page-specific content with motion transition */}
-        <motion.main
-          key={pathname} // Re-trigger the animation when the path changes
-          initial="hidden"
-          animate="enter"
-          exit="exit"
-          variants={pageVariants}
-          transition={{ type: "tween", duration: 0.5 }} // Smooth animation
-          className={pathname !== "/" ? "mt-[64px]" : ""}
-        >
+        {/* Page-specific content */}
+        <main className={pathname !== "/" ? "mt-[64px]" : ""}>
           {children}
-        </motion.main>
+        </main>
       </body>
     </html>
   );

@@ -1,0 +1,42 @@
+.custom-button {
+    background-color: #edecd9;
+    color: #800080;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin: 10px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    position: relative; /* Needed for the pseudo-element to be positioned relative to the button */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth color transition */
+  }
+  
+  .custom-button::before {
+    content: '';
+    position: absolute;
+    top: 10px; /* Offset the purple square behind */
+    left: 10px;
+    width: 100%; /* Match the button width */
+    height: 100%; /* Match the button height */
+    background-color: #800080; /* Solid purple square */
+    border-radius: 10px; /* Ensure the square matches button's border-radius */
+    z-index: -1; /* Ensure it stays behind the button */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth color transition */
+  }
+  
+  .custom-button:hover {
+    background-color: #800080; /* Change button background on hover */
+    color: #edecd9; /* Change text color on hover */
+  }
+
+  .custom-button:hover::before {
+    background-color: #edecd9; /* Change button background on hover */
+    color: #800080; /* Change text color on hover */
+  }
+  
+  
+  .custom-text-color {
+    color: #edecd9; 
+  }
+  
+  
