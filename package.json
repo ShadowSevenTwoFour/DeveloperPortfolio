@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "export": "next export",
+    "deploy": "npm run build && npm run export && gh-pages -d out"
   },
   "dependencies": {
     "framer-motion": "^11.5.4",
@@ -18,7 +20,10 @@
   "devDependencies": {
     "eslint": "^8",
     "eslint-config-next": "14.2.8",
+    "gh-pages": "^6.1.1",
     "postcss": "^8",
     "tailwindcss": "^3.4.1"
-  }
+  },
+  "homepage": "https://ShadowSevenTwoFour.github.io/shadowseventwofour.github.io"
+
 }

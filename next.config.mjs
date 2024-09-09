@@ -1,4 +1,8 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {};
+// next.config.mjs
 
-export default nextConfig;
+export default {
+    output: 'export',
+    basePath: '/shadowseventwofour.github.io',
+    assetPrefix: '/shadowseventwofour.github.io',
+  }
+  
