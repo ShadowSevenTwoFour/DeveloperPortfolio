@@ -1,6 +1,6 @@
 "use client"; // Add this to make the page a Client Component
 
-import ThreeBackground from '@/app/components/ThreeBackground';
+import ThreeBackground from './ThreeBackground';
 
 
 export default function Home() {
