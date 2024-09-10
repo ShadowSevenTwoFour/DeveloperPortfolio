@@ -1,19 +1,42 @@
+"use client";
+
+import { useState, useEffect } from "react";
+import Image from 'next/image';
+
 export default function Projects() {
+  const [isFadingIn, setIsFadingIn] = useState(true); // State to manage fade-in
+
+  // Trigger the fade-in animation when the component mounts
+  useEffect(() => {
+    setIsFadingIn(false); // After the component mounts, apply fade-in
+  }, []);
+
   return (
-    <main className="min-h-screen flex flex-col items-center p-8">
+    <main className={`min-h-screen flex flex-col items-center p-8 ${isFadingIn ? 'fade-out' : 'fade-in'}`}>
       {/* Anchor the title at the top of the page */}
-      <h1 className="text-3xl font-bold mb-8 sticky top-0 bg-gray w-full text-center p-4 z-10">
-        Work in progress, check back in soon!
+      <h1 className="text-3xl font-bold mb-8 top-0 bg-gray w-full text-center p-4 z-10">
+        Work in Progress, check back in later!
       </h1>
     </main>
   );
 }
 
+
+// "use client";
+
+// import { useState, useEffect } from "react";
 // import Image from 'next/image';
 
 // export default function Projects() {
+//   const [isFadingIn, setIsFadingIn] = useState(true); // State to manage fade-in
+
+//   // Trigger the fade-in animation when the component mounts
+//   useEffect(() => {
+//     setIsFadingIn(false); // After the component mounts, apply fade-in
+//   }, []);
+
 //   return (
-//     <main className="min-h-screen flex flex-col items-center p-8">
+//     <main className={`min-h-screen flex flex-col items-center p-8 ${isFadingIn ? 'fade-out' : 'fade-in'}`}>
 //       {/* Anchor the title at the top of the page */}
 //       <h1 className="text-3xl font-bold mb-8 top-0 bg-gray w-full text-center p-4 z-10">
 //         Projects

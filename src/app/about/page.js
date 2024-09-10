@@ -1,6 +1,19 @@
+"use client";
+
+import { useState, useEffect } from "react";
+import { useRouter } from "next/navigation"; // For navigation
+
 export default function AboutContact() {
+  const [isFadingIn, setIsFadingIn] = useState(true); // State to manage fade-in
+  const router = useRouter(); // Get Next.js router
+
+  // Trigger fade-in when component mounts
+  useEffect(() => {
+    setIsFadingIn(false); // Remove fade-in when the component mounts
+  }, []);
+
   return (
-    <main className="min-h-screen p-6 sm:p-12 bg-black text-white">
+    <main className={`min-h-screen p-6 sm:p-12 text-white ${isFadingIn ? 'fade-out' : 'fade-in'}`}>
       {/* About Section */}
       <section className="mb-16">
         <h1 className="text-4xl font-extrabold mb-6 text-white">About Me</h1>
