@@ -61,6 +61,15 @@ export default function AboutContact() {
               height={64}  // Adjust height as needed
             />
           </a>
+          {/* Resume */}
+          <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+            <Image
+              src="/resume-logo.png"  // Path to your resume icon (add a resume icon in your public directory)
+              alt="Resume"
+              width={64}  // Adjust width as needed
+              height={64}  // Adjust height as needed
+            />
+          </a>
         </div>
       </section>
     </main>
