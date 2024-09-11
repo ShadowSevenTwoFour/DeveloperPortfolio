@@ -31,16 +31,56 @@
   width: 100%; /* Make text container take full width by default */
 }
 
-/* Media query to make the layout responsive */
-@media (max-width: 768px) {
+/* Media query for portrait-like aspect ratios (narrower screens) */
+@media (max-aspect-ratio: 1/1) {
   .project-container {
-    flex-direction: column;
-    padding: 0.5rem; /* Reduce padding for mobile */
+    flex-direction: column; /* Stack elements vertically */
+    padding: 0.5rem; /* Adjust padding for narrower aspect ratios */
+  }
+
+  /* Ensure image takes full width and text appears below */
+  .project-image-container {
+    width: 100%; /* Image takes full width in portrait aspect ratios */
   }
 
   .project-text {
-    width: 90%; /* Make text render wider on mobile */
-    padding-left: 0.5rem; /* Adjust inner padding to prevent too much space on the left */
-    padding-right: 0.5rem; /* Adjust inner padding to prevent too much space on the right */
+    width: 100%; /* Text also takes full width */
+    text-align: center; /* Center the text */
+    margin-top: 1rem; /* Space between image and text */
+  }
+
+  /* Center the GitHub logo */
+  .project-text a {
+    display: flex;
+    justify-content: center; /* Center the link */
+    margin-top: 1rem; /* Add some space between text and the GitHub logo */
+  }
+}
+
+/* Media query for landscape-like aspect ratios (wider screens) */
+@media (min-aspect-ratio: 1/1) {
+  /* Alternating arrangement for landscape aspect ratios */
+  .project-container {
+    flex-direction: row; /* Default horizontal arrangement */
+    gap: 2rem;
+  }
+
+  .project-container:nth-child(even) {
+    flex-direction: row-reverse; /* Reverse layout for even project entries */
+  }
+
+  .project-image-container {
+    width: 50%; /* Image takes half the width */
+  }
+
+  .project-text {
+    width: 50%; /* Text also takes half the width */
+    text-align: left; /* Keep text left-aligned */
+  }
+
+  /* GitHub logo stays left-aligned in landscape mode */
+  .project-text a {
+    justify-content: flex-start;
+    margin-top: 0; /* Remove extra margin */
   }
 }
