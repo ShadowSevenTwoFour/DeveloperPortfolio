@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Image from 'next/image'; // Import the Image component
 import { useRouter } from "next/navigation"; // For navigation
 import './about.css';  // Import your custom CSS file
+import ThreeJSResume from './resume'; // Import the Three.js component
 
 export default function AboutContact() {
   const [isFadingIn, setIsFadingIn] = useState(true); // State to manage fade-in
@@ -29,47 +30,44 @@ export default function AboutContact() {
 
       {/* Contact Section */}
       <section className="contact-section">
-        <h2>Contact Me</h2>
-        <p>
-          Feel free to reach out if you&apos;d like to collaborate on a project, have any questions, or just want to say hi!
-        </p>
-        <div className="contact-details">
-          {/* Email */}
-          <a href="mailto:kumaranmayank.work@gmail.com" target="_blank" rel="noopener noreferrer">
-            <Image
-              src="/email-logo.png"  // Path to your email icon
-              alt="Email"
-              width={64}  // Adjust width as needed
-              height={64}  // Adjust height as needed
-            />
-          </a>
-          {/* LinkedIn */}
-          <a href="https://www.linkedin.com/in/mayank-kumaran-b45344236/" target="_blank" rel="noopener noreferrer">
-            <Image
-              src="/linkedin-logo.png"  // Path to your LinkedIn icon
-              alt="LinkedIn"
-              width={64}  // Adjust width as needed
-              height={64}  // Adjust height as needed
-            />
-          </a>
-          {/* GitHub */}
-          <a href="https://github.com/ShadowSevenTwoFour" target="_blank" rel="noopener noreferrer">
-            <Image
-              src="/github-logo.png"  // Path to your GitHub icon
-              alt="GitHub"
-              width={64}  // Adjust width as needed
-              height={64}  // Adjust height as needed
-            />
-          </a>
-          {/* Resume */}
-          <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
-            <Image
-              src="/resume-logo.png"  // Path to your resume icon (add a resume icon in your public directory)
-              alt="Resume"
-              width={64}  // Adjust width as needed
-              height={64}  // Adjust height as needed
-            />
-          </a>
+        <div className="contact-left">
+          <h2>Contact Me</h2>
+          <p>
+            Feel free to reach out if you&apos;d like to collaborate on a project, have any questions, or just want to say hi!
+          </p>
+          <div className="contact-details">
+            {/* Email */}
+            <a href="mailto:kumaranmayank.work@gmail.com" target="_blank" rel="noopener noreferrer">
+              <Image
+                src="/email-logo.png"  // Path to your email icon
+                alt="Email"
+                width={64}  // Adjust width as needed
+                height={64}  // Adjust height as needed
+              />
+            </a>
+            {/* LinkedIn */}
+            <a href="https://www.linkedin.com/in/mayank-kumaran-b45344236/" target="_blank" rel="noopener noreferrer">
+              <Image
+                src="/linkedin-logo.png"  // Path to your LinkedIn icon
+                alt="LinkedIn"
+                width={64}  // Adjust width as needed
+                height={64}  // Adjust height as needed
+              />
+            </a>
+            {/* GitHub */}
+            <a href="https://github.com/ShadowSevenTwoFour" target="_blank" rel="noopener noreferrer">
+              <Image
+                src="/github-logo.png"  // Path to your GitHub icon
+                alt="GitHub"
+                width={64}  // Adjust width as needed
+                height={64}  // Adjust height as needed
+              />
+            </a>
+          </div>
+        </div>
+
+        <div className="contact-right">
+          <ThreeJSResume /> {/* Render the Three.js canvas on the right */}
         </div>
       </section>
     </main>
