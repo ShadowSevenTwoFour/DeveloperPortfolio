@@ -1,5 +1,5 @@
 .custom-button {
-    background-color: #edecd9;
+    background-color: #FFFFFF;
     color: #800080;
     padding: 10px 20px;
     border-radius: 10px;
@@ -26,17 +26,17 @@
   
   .custom-button:hover {
     background-color: #800080; /* Change button background on hover */
-    color: #edecd9; /* Change text color on hover */
+    color: #FFFFFF; /* Change text color on hover */
   }
 
   .custom-button:hover::before {
-    background-color: #edecd9; /* Change button background on hover */
+    background-color: #FFFFFF; /* Change button background on hover */
     color: #800080; /* Change text color on hover */
   }
   
   
   .custom-text-color {
-    color: #edecd9; 
+    color: #FFFFFF; 
   }
   
   

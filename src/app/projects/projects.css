@@ -1,0 +1,40 @@
+/* projects.css */
+
+/* Add a box shadow to images */
+.project-image {
+  box-shadow: 10px 10px #800080, 
+              10px 10px #800080;
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out; /* Transition for smooth rising effect */
+}
+
+/* Hover effect for the image to rise slightly */
+.project-image:hover {
+  transform: translateY(-10px); /* Move image up slightly */
+}
+
+/* Style for the project container */
+.project-container {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 8px;
+  gap: 2rem;
+}
+
+/* Remove hover background color change */
+.project-container:hover {
+  background-color: transparent; /* Keep background transparent */
+}
+
+/* Left-aligned text */
+.project-text {
+  text-align: left;
+}
+
+/* Media query to make the layout responsive */
+@media (max-width: 768px) {
+  .project-container {
+    flex-direction: column;
+  }
+}

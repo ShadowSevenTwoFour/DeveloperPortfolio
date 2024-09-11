@@ -8,8 +8,6 @@
   --foreground: #edecd9; /* Default light foreground */
 }
 
-
-
 body {
   color: var(--foreground);
   background: var(--background);
@@ -22,7 +20,6 @@ body {
   }
 }
 
-/* globals.css */
 .fade-in {
   opacity: 1;
   transition: opacity 0.5s ease-in-out; /* 500ms fade-in */
