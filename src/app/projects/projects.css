@@ -1,5 +1,3 @@
-/* projects.css */
-
 /* Add a box shadow to images */
 .project-image {
   box-shadow: 10px 10px #800080, 
@@ -30,11 +28,19 @@
 /* Left-aligned text */
 .project-text {
   text-align: left;
+  width: 100%; /* Make text container take full width by default */
 }
 
 /* Media query to make the layout responsive */
 @media (max-width: 768px) {
   .project-container {
     flex-direction: column;
+    padding: 0.5rem; /* Reduce padding for mobile */
+  }
+
+  .project-text {
+    width: 90%; /* Make text render wider on mobile */
+    padding-left: 0.5rem; /* Adjust inner padding to prevent too much space on the left */
+    padding-right: 0.5rem; /* Adjust inner padding to prevent too much space on the right */
   }
 }
