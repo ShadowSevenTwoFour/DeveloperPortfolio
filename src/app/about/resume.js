@@ -9,17 +9,32 @@ export default function ThreeJSResume() {
     // Setup the scene
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(75, 1, 0.1, 1000);
-    const renderer = new THREE.WebGLRenderer({ antialias: true , alpha: true});
+    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
     renderer.setSize(200, 200); // Set renderer size
 
-    // Function to create a texture with the word "Resume"
+    // Function to create a texture with the word "Resume" and purple corners
     const createTextTexture = (text) => {
       const canvas = document.createElement('canvas');
       const context = canvas.getContext('2d');
       canvas.width = 256;
       canvas.height = 256;
 
-      // Set background and text styles
+      // Set background to transparent and purple for corners
+      context.clearRect(0, 0, canvas.width, canvas.height); // Transparent background
+
+      // Draw purple corners
+      const cornerSize = 60; // Size of the corner
+      context.fillStyle = '#800080'; // Purple color
+      // Top-left corner
+      context.fillRect(0, 0, cornerSize, cornerSize);
+      // Top-right corner
+      context.fillRect(canvas.width - cornerSize, 0, cornerSize, cornerSize);
+      // Bottom-left corner
+      context.fillRect(0, canvas.height - cornerSize, cornerSize, cornerSize);
+      // Bottom-right corner
+      context.fillRect(canvas.width - cornerSize, canvas.height - cornerSize, cornerSize, cornerSize);
+
+      // Draw the text
       context.fillStyle = 'white';
       context.font = 'bold 48px Arial';
       context.textAlign = 'center';
