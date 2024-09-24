@@ -27,6 +27,12 @@ export default function Projects() {
       link: "https://github.com/ShadowSevenTwoFour/RFID-NFC-Scanner"
     },
     {
+      title: "My Portfolio",
+      description: "This website that you're on right now is made using a stack of Next.js, React.js, and Three.js, with HTML and Tailwind CSS styling.",
+      imageSrc: "/portfolio_home.png",
+      link: "https://github.com/ShadowSevenTwoFour/DeveloperPortfolio"
+    },
+    {
       title: "FPGA-Based Super Mario Bros NES",
       description: "Recreated Super Mario Bros for the NES (with some fun course-specific tweaks) on an FPGA using VHDL and a VGA display.",
       imageSrc: "/fpga-mario.png",
@@ -37,7 +43,7 @@ export default function Projects() {
       description: "Made an RC car in a team of 4 using an Arduino Uno, a bluetooth controller, and Fusion360 for CAD.",
       imageSrc: "/rc-car.png",
       link: "https://github.com/ShadowSevenTwoFour/RC-Car"
-    }
+    },
   ];
 
   return (

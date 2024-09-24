@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 import Image from 'next/image'; // Import the Image component
 import { useRouter } from "next/navigation"; // For navigation
 import './about.css';  // Import your custom CSS file
-import ThreeJSResume from './resume'; // Import the Three.js component
 
 export default function AboutContact() {
   const [isFadingIn, setIsFadingIn] = useState(true); // State to manage fade-in
@@ -67,7 +66,13 @@ export default function AboutContact() {
         </div>
 
         <div className="contact-right">
-          <ThreeJSResume /> {/* Render the Three.js canvas on the right */}
+          {/* Resume Button */}
+          <button 
+            className="resume-button" 
+            onClick={() => window.open('/Mayank_Kumaran_FA24_Resume.pdf', '_blank')}
+          >
+            Download My Resume
+          </button>
         </div>
       </section>
     </main>
