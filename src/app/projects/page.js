@@ -15,6 +15,12 @@ export default function Projects() {
   // Sample project data for rendering
   const projects = [
     {
+        title: "RISC-V Simulator and Disassembler",
+        description: "A Python-based RISC-V RV64I simulator and disassembler designed to execute, debug, and analyze RISC-V programs. Features ELF binary execution, MMIO, and instruction tracing.",
+        imageSrc: "/riscv-simulator.png",
+        link: "https://github.com/ShadowSevenTwoFour/riscv-simulator-disassembler"
+      },
+    {
       title: "RFID Scanner",
       description: "Developed an RFID scanner using Arduino and ESP32 to scan NFC tags and securely log data to a SQL database.",
       imageSrc: "/rfid-nfc-scanner.png",
@@ -44,12 +50,7 @@ export default function Projects() {
       imageSrc: "/rc-car.png",
       link: "https://github.com/ShadowSevenTwoFour/RC-Car"
     }, 
-    {
-        title: "RISC-V Simulator and Disassembler",
-        description: "A Python-based RISC-V RV64I simulator and disassembler designed to execute, debug, and analyze RISC-V programs. Features ELF binary execution, MMIO, and instruction tracing.",
-        imageSrc: "/riscv-simulator.png",
-        link: "https://github.com/ShadowSevenTwoFour/riscv-simulator-disassembler"
-      },
+
   ];
 
   return (
