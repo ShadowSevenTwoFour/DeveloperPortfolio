@@ -2,16 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+    font-family: 'Playwrite ES Deco Guides';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/playwriteesdecoguides/v1/flUrRriwwII5RVl2TZ1XBNTUOYY6ZzZzwPCEKtwqZQ.woff2) format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/roboto/v32/KFOmCnqEu92Fr1Mu4mxK.woff2) format('woff2');
+  }
+  
 /* Default colors (dark mode) */
 :root {
-  --background: #0a0a0a; /* Default dark background */
-  --foreground: #edecd9; /* Default light foreground */
+  --background: #000500; /* Default dark background */
+  --foreground: #FFFbFF; /* Default light foreground */
+  --primary: #06402b;
+  --secondary: #457b57;
+  --tertiary: #a7d6bf;
+}
+
+html {
+  font-family: 'Roboto', serif;
 }
 
 body {
+font-family: 'Roboto', serif;
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 @layer utilities {

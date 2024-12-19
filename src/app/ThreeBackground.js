@@ -9,11 +9,18 @@ export default function ThreeBackground() {
   useEffect(() => {
     if (!mountRef.current) return;
 
+    const rootStyles = getComputedStyle(document.documentElement);
+    const backgroundColor = new THREE.Color(rootStyles.getPropertyValue("--background").trim());
+    const foregroundColor = new THREE.Color(rootStyles.getPropertyValue("--foreground").trim());
+    const primaryColor = new THREE.Color(rootStyles.getPropertyValue("--primary").trim());
+    const secondaryColor = new THREE.Color(rootStyles.getPropertyValue("--secondary").trim());
+    const tertiaryColor = new THREE.Color(rootStyles.getPropertyValue("--tertiary").trim());
+
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
     const renderer = new THREE.WebGLRenderer({ alpha: true });
     renderer.setSize(window.innerWidth, window.innerHeight);
-    renderer.setClearColor(0x0a0a0a);
+    renderer.setClearColor(backgroundColor);
     mountRef.current.appendChild(renderer.domElement);
 
     const pointsGeometry = new THREE.BufferGeometry();
@@ -31,9 +38,9 @@ export default function ThreeBackground() {
     function createColor(isLit) {
       const color = new THREE.Color();
       if (isLit) {
-        color.set(0xc95eff);
+        color.set(tertiaryColor);
       } else {
-        color.set(0x5a2873);
+        color.set(secondaryColor);
       }
       return color;
     }
@@ -68,7 +75,7 @@ export default function ThreeBackground() {
     scene.add(points);
 
     const lineMaterial = new THREE.LineBasicMaterial({
-      color: 0x9e47c9,
+      color: secondaryColor,
       transparent: true,
       opacity: 0.3,
     });
@@ -85,14 +92,8 @@ export default function ThreeBackground() {
       mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
 
       raycaster.setFromCamera(mouse, camera);
-      const intersects = raycaster.intersectObject(points);
-      if (intersects.length > 0) {
-        cursorPosition.copy(intersects[0].point);
-        needsColorUpdate = true;
-      } else {
         raycaster.ray.at(50, cursorPosition);
         needsColorUpdate = true;
-      }
     });
 
     // Window resize handling

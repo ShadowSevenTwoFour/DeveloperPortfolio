@@ -1,6 +1,6 @@
 .custom-button {
-    background-color: #FFFFFF;
-    color: #800080;
+    background-color: var(--foreground);
+    color: var(--primary);
     padding: 10px 20px;
     border-radius: 10px;
     margin: 10px;
@@ -18,25 +18,25 @@
     left: 10px;
     width: 100%; /* Match the button width */
     height: 100%; /* Match the button height */
-    background-color: #800080; /* Solid purple square */
+    background-color: var(--primary); /* Solid purple square */
     border-radius: 10px; /* Ensure the square matches button's border-radius */
     z-index: -1; /* Ensure it stays behind the button */
     transition: background-color 0.3s ease, color 0.3s ease; /* Smooth color transition */
   }
   
   .custom-button:hover {
-    background-color: #800080; /* Change button background on hover */
-    color: #FFFFFF; /* Change text color on hover */
+    background-color: var(--primary); /* Change button background on hover */
+    color: var(--foreground); /* Change text color on hover */
   }
 
   .custom-button:hover::before {
-    background-color: #FFFFFF; /* Change button background on hover */
-    color: #800080; /* Change text color on hover */
+    background-color: var(--foreground); /* Change button background on hover */
+    color: var(--primary); /* Change text color on hover */
   }
   
   
   .custom-text-color {
-    color: #FFFFFF; 
+    color: var(--foreground); 
   }
   
   

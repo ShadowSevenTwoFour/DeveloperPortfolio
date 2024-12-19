@@ -15,12 +15,6 @@ export default function Projects() {
   // Sample project data for rendering
   const projects = [
     {
-      title: "Mammoth Melee",
-      description: "A retro-style 2D fighter game that consists of players using 'mammoth' sized weapons to fight each other.",
-      imageSrc: "/mammoth-melee-home.png",
-      link: "https://github.com/ShadowSevenTwoFour/Mammoth-Melee"
-    },
-    {
       title: "RFID Scanner",
       description: "Developed an RFID scanner using Arduino and ESP32 to scan NFC tags and securely log data to a SQL database.",
       imageSrc: "/rfid-nfc-scanner.png",
@@ -39,11 +33,23 @@ export default function Projects() {
       link: "https://github.com/ShadowSevenTwoFour/Super-Mario-Bros-L1"
     },
     {
+        title: "Mammoth Melee",
+        description: "A retro-style 2D fighter game that consists of players using 'mammoth' sized weapons to fight each other.",
+        imageSrc: "/mammoth-melee-home.png",
+        link: "https://github.com/ShadowSevenTwoFour/Mammoth-Melee"
+    },
+    {
       title: "RC Car",
       description: "Made an RC car in a team of 4 using an Arduino Uno, a bluetooth controller, and Fusion360 for CAD.",
       imageSrc: "/rc-car.png",
       link: "https://github.com/ShadowSevenTwoFour/RC-Car"
-    },
+    }, 
+    {
+        title: "RISC-V Simulator and Disassembler",
+        description: "A Python-based RISC-V RV64I simulator and disassembler designed to execute, debug, and analyze RISC-V programs. Features ELF binary execution, MMIO, and instruction tracing.",
+        imageSrc: "/riscv-simulator.png",
+        link: "https://github.com/ShadowSevenTwoFour/riscv-simulator-disassembler"
+      },
   ];
 
   return (
@@ -69,7 +75,7 @@ export default function Projects() {
                 className="project-image w-full h-full object-contain"
               />
             </div>
-            <div className="flex flex-col justify-center project-text p-4 w-1/2">
+            <div className="flex flex-col justify-center project-text-box p-4 w-1/2">
               <h2 className="text-2xl font-semibold">{project.title}</h2>
               <p className="text-gray-600 dark:text-gray-400 mt-2">{project.description}</p>
               <a href={project.link} target="_blank" rel="noopener noreferrer">

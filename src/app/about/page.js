@@ -5,7 +5,7 @@ import Image from 'next/image'; // Import the Image component
 import { useRouter } from "next/navigation"; // For navigation
 import './about.css';  // Import your custom CSS file
 
-export default function AboutContact() {
+export default function About() {
   const [isFadingIn, setIsFadingIn] = useState(true); // State to manage fade-in
   const router = useRouter(); // Get Next.js router
 
@@ -25,55 +25,6 @@ export default function AboutContact() {
         <p>
           My experience spans machine learning, embedded systems, and web development, including projects like creating an open-source Active Learning package, developing an MQTT client for electric vehicles, and leading the development of a 2D fighter game. I enjoy tackling complex challenges, collaborating on creative solutions, and continuously learning new technologies. When I&apos;m not coding, I enjoy working on game development, mentoring, and exploring the latest in AI and tech.
         </p>
-      </section>
-
-      {/* Contact Section */}
-      <section className="contact-section">
-        <div className="contact-left">
-          <h2>Contact Me</h2>
-          <p>
-            Feel free to reach out if you&apos;d like to collaborate on a project, have any questions, or just want to say hi!
-          </p>
-          <div className="contact-details">
-            {/* Email */}
-            <a href="mailto:kumaranmayank.work@gmail.com" target="_blank" rel="noopener noreferrer">
-              <Image
-                src="/email-logo.png"  // Path to your email icon
-                alt="Email"
-                width={64}  // Adjust width as needed
-                height={64}  // Adjust height as needed
-              />
-            </a>
-            {/* LinkedIn */}
-            <a href="https://www.linkedin.com/in/mayank-kumaran-b45344236/" target="_blank" rel="noopener noreferrer">
-              <Image
-                src="/linkedin-logo.png"  // Path to your LinkedIn icon
-                alt="LinkedIn"
-                width={64}  // Adjust width as needed
-                height={64}  // Adjust height as needed
-              />
-            </a>
-            {/* GitHub */}
-            <a href="https://github.com/ShadowSevenTwoFour" target="_blank" rel="noopener noreferrer">
-              <Image
-                src="/github-logo.png"  // Path to your GitHub icon
-                alt="GitHub"
-                width={64}  // Adjust width as needed
-                height={64}  // Adjust height as needed
-              />
-            </a>
-          </div>
-        </div>
-
-        <div className="contact-right">
-          {/* Resume Button */}
-          <button 
-            className="resume-button" 
-            onClick={() => window.open('/Mayank_Kumaran_FA24_Resume.pdf', '_blank')}
-          >
-            Download My Resume
-          </button>
-        </div>
       </section>
     </main>
   );

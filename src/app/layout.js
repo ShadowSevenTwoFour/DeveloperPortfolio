@@ -76,6 +76,14 @@ export default function RootLayout({ children }) {
                     Projects
                   </button>
                 </li>
+                <li>
+                  <button
+                    onClick={() => handleNavigation("/contact")}
+                    className="hover:underline"
+                  >
+                    Contact
+                  </button>
+                </li>
               </ul>
             </nav>
           </header>

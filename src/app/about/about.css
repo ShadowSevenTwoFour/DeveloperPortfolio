@@ -2,8 +2,8 @@
 .main-container {
   min-height: 100vh;
   padding: 1.5rem;
-  background-color: #0a0a0a; /* Dark black background */
-  color: #FFFFFF; /* Soft cream text color */
+  background-color: var(--background); /* Dark black background */
+  color: var(--foreground); /* Soft cream text color */
   text-align: left;
 }
 
@@ -33,96 +33,21 @@
   font-size: 2.25rem; /* 4xl */
   font-weight: 800; /* extrabold */
   margin-bottom: 1.5rem;
-  color: #FFFFFF;
+  color: var(--foreground);
 }
 
 .about-section p {
   font-size: 1.125rem; /* lg */
-  color: #FFFFFF; /* Soft cream text */
+  color: var(--foreground); /* Soft cream text */
   margin-bottom: 1.5rem;
   line-height: 1.75rem;
 }
 
-/* Contact Section */
-.contact-section {
-  background-color: #2B2B2B; /* Dark gray background */
-  padding: 2rem;
-  border-radius: 0.5rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Stronger shadow for depth */
-  display: flex;
-  flex-direction: column; /* Default to column layout on smaller screens */
-}
-
-@media (min-width: 768px) {
-  .contact-section {
-    flex-direction: row; /* Row layout for larger screens */
-    justify-content: space-between; /* Space between left and right sections */
-    align-items: center; /* Align the items vertically */
-  }
-}
-
-.contact-section h2 {
-  font-size: 1.875rem; /* 3xl */
-  font-weight: 700; /* bold */
-  margin-bottom: 1.5rem;
-  color: #FFFFFF;
-}
-
-.contact-section p {
-  font-size: 1.125rem; /* lg */
-  color: #FFFFFF; /* Soft cream text */
-  margin-bottom: 1.5rem;
-}
-
-/* Contact Left Section */
-.contact-left {
-  flex: 3;
-  margin-bottom: 2rem; /* Add space below on smaller screens */
-}
-
-@media (min-width: 768px) {
-  .contact-left {
-    margin-bottom: 0; /* Remove bottom margin on larger screens */
-  }
-}
-
-/* Flexbox for contact icons */
-.contact-details {
-  display: flex;
-  gap: 1rem; /* Space between the icons */
-  justify-content: flex-start; /* Align to the left */
-}
-
-.contact-details a {
-  display: inline-block;
-  width: 32px;
-  height: 32px;
-  transition: filter 0.3s ease; /* Smooth transition effect */
-}
-
-.contact-details a:hover {
-  filter: brightness(1.2) hue-rotate(270deg);
-}
-
-.contact-details img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-/* Contact Right Section with Resume Button */
-.contact-right {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column; /* Stack elements vertically */
-}
 
 /* Move the resume button to the right */
 .resume-button {
-  background-color: #800080;
-  color: white;
+  background-color: var(--primary);
+  color: var(--foreground);
   padding: 15px 30px;
   font-size: 18px;
   border-radius: 50px;
@@ -133,14 +58,8 @@
 }
 
 .resume-button:hover {
-  background-color: #9a00b8;
-  transform: scale(1.05);
-}
+  background-color: var(--tertiary);
+  color: var(--background);
 
-/* Contact Right Three.js canvas */
-.contact-right canvas {
-  width: 300px;
-  height: 300px;
-  cursor: pointer;
-  display: block;
+  transform: scale(1.05);
 }
