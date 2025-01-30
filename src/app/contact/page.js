@@ -58,7 +58,7 @@ export default function Contact() {
           {/* Resume Button */}
           <button 
             className="resume-button" 
-            onClick={() => window.open('/Mayank_Kumaran_FA24_Resume.pdf', '_blank')}
+            onClick={() => window.open('/Mayank_Kumaran_SP25_Resume.pdf', '_blank')}
           >
             Download My Resume
           </button>
